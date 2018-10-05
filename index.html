@@ -21,21 +21,27 @@
   	</head>
   	<body>
   		<div style="position: absolute; right: 0px; top: 0px; width: calc(25%); background-color: rgb(255, 253, 152); height: 100%" class="text-center">
-  			<h4 class="mt-5" style="color: #23395B">Scream Panel</h4>
-  			<div class="form-group text-left mx-2 mt-5">
+  			<h4 class="mt-5" style="color: #23395B">Screamer Panel</h4>
+  			<div class="form-group text-left mx-3 mt-5">
     			<label for="usernameField" style="color: #23395B">Username</label>
     			<input type="username" class="form-control" id="usernameField" placeholder="Username">
-  				<button class="btn mt-3 w-100" style="background-color: #59C9A5; color: #23395B"> Ready </button>
+  				<button class="btn mt-3 w-100" style="background-color: #59C9A5; color: #23395B;" id="readyBtn">Ready</button>
   			</div>
   		</div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="./assets/js/jquery-3.3.1.slim.min.js"></script>
-    <script src="./assets/js/popper.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-  	<script src="/socket.io/socket.io.js"></script>
-  	<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
-  	<script language="javascript" type="text/javascript" src="Thing.js"></script>
-  	<script language="javascript" type="text/javascript" src="client.js"></script>
+  		<script src="./assets/js/jquery-3.3.1.slim.min.js"></script>
+	    <script src="./assets/js/popper.min.js"></script>
+	    <script src="./assets/js/bootstrap.min.js"></script>
+	  	<script src="/socket.io/socket.io.js"></script>
+	  	<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+	  	<script language="javascript" type="text/javascript" src="Thing.js"></script>
+	  	<script language="javascript" type="text/javascript" src="client.js"></script>
+	  	<script type="text/javascript">
+	  		$(document).ready(function(){
+	  			$("#readyBtn").on('click', function(){
+	  				$(this).css({'cursor': 'not-allowed'});
+	  				$(this).text("Unready");
+	  			});
+	  		});
+	  	</script>
   </body>
 </html>

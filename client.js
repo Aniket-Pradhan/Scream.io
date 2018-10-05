@@ -1,16 +1,16 @@
-	var things = [];
-	var users = {};
+var things = [];
+var users = {};
 
-	const socket = io();
-	socket.on("users",function(info){
-		//Get all other users' mouse positions
-		users = info;
-	});
+const socket = io();
+socket.on("users",function(info){
+	//Get all other users' mouse positions
+	users = info;
+});
 
-	function setup() {
-	  	createCanvas(windowWidth*75/100, windowHeight);
-    	background(35, 57 , 91);
-	}
+function setup() {
+  	createCanvas(windowWidth*75/100, windowHeight);
+	background(35, 57 , 91);
+}
 
 function draw() {
 
@@ -19,6 +19,7 @@ function draw() {
     //Remove outline of things
     noStroke();
     console.log(things.length);
+    
     //Loop through all of the objects, and show them
     for(i = things.length - 1; i > -1; i--){
     	var t = things[i];
