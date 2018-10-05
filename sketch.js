@@ -1,7 +1,11 @@
 var mic;
+var xPos;
+var yPos;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
+  xPos = 0;
+  yPos = height;
 
   // Create an Audio input
   mic = new p5.AudioIn();
@@ -21,5 +25,5 @@ function draw() {
 
   // Draw an ellipse with height based on volume
   var h = map(vol*2, 0, 1, height, 0);
-  ellipse(width/2, h - 25, 50, 50);
+  ellipse(width/2, h-25, 50, 50);
 }
