@@ -8,10 +8,24 @@
     	<!-- Bootstrap CSS -->
     	<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 
-  		<style> body {padding: 0; margin: 0;} </style>
+  		<style> 
+  			* {
+  				padding: 0; 
+  				margin: 0;
+  			} 
+  			html{
+  				overflow: hidden;
+  			}
+  		</style>
   	</head>
   	<body>
-
+  		<div style="position: absolute; right: 0px; top: 0px; width: calc(25%); background-color: rgb(255, 253, 152); height: 100%" class="text-center">
+  			<div class="form-group text-left mx-2 mt-5">
+    			<label for="usernameField">Username</label>
+    			<input type="username" class="form-control" id="usernameField" placeholder="Username">
+  			</div>
+  			<button class="btn mt-5 py-3 px-5" style="font-size: 20px; background-color: #59C9A5; color: #23395B"> Ready </button>
+  		</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="./assets/js/jquery-3.3.1.slim.min.js"></script>
