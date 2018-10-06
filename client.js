@@ -131,11 +131,11 @@ function draw() {
 
 	if(win==1) {
 		alert("YOU WIN!");
-		frameRate(1);
+		remove();
 	}
 	if(win==2) {
 		alert("YOU LOSE!");
-		frameRate(2);
+		remove();
 	}
 
 }
