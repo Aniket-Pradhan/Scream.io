@@ -96,15 +96,15 @@ function draw() {
 	};
 
 	//Add new item to the list where the mouse is...
-	things.push(new Thing(xPos,yPos));
+	things.push(new Thing(xPos,yPos,flag));
 
 	//Now...add all of the other user's mouse positions to the array (FUN!)
 	for(var user in users){
 		var u = users[user];
-		things.push(new Thing(u.x,u.y));
+		things.push(new Thing(u.x,u.y,u.flag));
 	};
 
 	//We need to send the server our information so the other players can see it
-	socket.emit("info",{"x":xPos,"y":yPos});
+	socket.emit("info",{"x":xPos,"y":yPos,"flag":flag});
 
 }
