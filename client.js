@@ -69,7 +69,7 @@ function draw() {
 	    xPos+=vol*2;
 	  }
 	  
-	  if(xPos>width) {
+	  if(xPos>width-50) {
 	    xPos = 0;
 	    win = 1;
 	  }
@@ -131,11 +131,11 @@ function draw() {
 
 	if(win==1) {
 		alert("YOU WIN!");
-		remove();
+		win=0;
 	}
 	if(win==2) {
 		alert("YOU LOSE!");
-		remove();
+		win=0;
 	}
 
 }
