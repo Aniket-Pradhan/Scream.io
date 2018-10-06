@@ -1,4 +1,4 @@
-var Thing = function(x,y,flag){
+var Thing = function(x,y,flag,win){
     var alpha = 255;
     this.gone = false;
     this.show = function(){

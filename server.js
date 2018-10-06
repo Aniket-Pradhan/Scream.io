@@ -34,7 +34,8 @@ io.on("connection", (socket) => {
         //set default x and y positions for user
         x: 0,
         y: 0,
-        flag: 0
+        flag: 0,
+        win: 0
     };
 
     socket.on('info', (info) => {
@@ -44,6 +45,7 @@ io.on("connection", (socket) => {
             users[socket.id].x = info.x;
             users[socket.id].y = info.y;
             users[socket.id].flag = info.flag;
+            users[socket.id].win = info.win;
         }
     });
 

@@ -10,6 +10,7 @@ var esprite2;
 var esprite3;
 var things = [];
 var users = {};
+var win;
 
 const socket = io();
 socket.on("users", function(info){
@@ -35,6 +36,7 @@ function setup() {
   	yPos = height/2 - 25;
   
   	flag = 1;
+  	win = 0;
 
   	// Create an Audio input
   	mic = new p5.AudioIn();
@@ -67,8 +69,9 @@ function draw() {
 	    xPos+=vol*2;
 	  }
 	  
-	  if(xPos>width-50) {
+	  if(xPos>width-windowWidth*25/100) {
 	    xPos = 0;
+	    win = 1;
 	  }
 
 	  if(flag==1) {
@@ -108,6 +111,9 @@ function draw() {
 	//Now...add all of the other user's mouse positions to the array (FUN!)
 	for(var user in users){
 		var u = users[user];
+		if(u.win==1) {
+			win = 2;
+		}
 		//things.push(new Thing(u.x,u.y,u.flag));
 		if(u.flag==1 && u.x!=xPos) {
 	    	image(esprite1, u.x, u.y, 50, 50);
@@ -121,6 +127,15 @@ function draw() {
 	};
 
 	//We need to send the server our information so the other players can see it
-	socket.emit("info",{"x":xPos,"y":yPos,"flag":flag});
+	socket.emit("info",{"x":xPos,"y":yPos,"flag":flag,"win":win});
+
+	if(win==1) {
+		alert("YOU WIN!");
+		frameRate(1);
+	}
+	if(win==2) {
+		alert("YOU LOSE!");
+		frameRate(2);
+	}
 
 }
