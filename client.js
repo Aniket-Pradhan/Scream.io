@@ -69,7 +69,7 @@ function draw() {
 	    xPos+=vol*2;
 	  }
 	  
-	  if(xPos>width-windowWidth*25/100) {
+	  if(xPos>width) {
 	    xPos = 0;
 	    win = 1;
 	  }
