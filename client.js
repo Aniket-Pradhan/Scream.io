@@ -101,7 +101,16 @@ function draw() {
 	//Now...add all of the other user's mouse positions to the array (FUN!)
 	for(var user in users){
 		var u = users[user];
-		things.push(new Thing(u.x,u.y,u.flag));
+		//things.push(new Thing(u.x,u.y,u.flag));
+		if(u.flag==1) {
+	    	image(sprite1, u.x, u.y, 50, 50);
+	  	}
+	  	if(u.flag==2) {
+	    	image(sprite2, u.x, u.y, 50, 50);
+	  	}
+	  	if(u.flag==3) {
+	    	image(sprite3, u.x, u.y, 50, 50);
+	  	}
 	};
 
 	//We need to send the server our information so the other players can see it
