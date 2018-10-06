@@ -5,6 +5,9 @@ var flag;
 var sprite1;
 var sprite2;
 var sprite3;
+var esprite1;
+var esprite2;
+var esprite3;
 var things = [];
 var users = {};
 
@@ -18,6 +21,10 @@ function preload() {
 	sprite1 = loadImage('./assets/images/1.png');
 	sprite2 = loadImage('./assets/images/2.png');
 	sprite3 = loadImage('./assets/images/3.png');
+
+	esprite1 = loadImage('./assets/images/1e.png');
+	esprite2 = loadImage('./assets/images/2e.png');
+	esprite3 = loadImage('./assets/images/3e.png');
 }
 
 function setup() {
@@ -103,13 +110,13 @@ function draw() {
 		var u = users[user];
 		//things.push(new Thing(u.x,u.y,u.flag));
 		if(u.flag==1) {
-	    	image(sprite1, u.x, u.y, 50, 50);
+	    	image(esprite1, u.x, u.y, 50, 50);
 	  	}
 	  	if(u.flag==2) {
-	    	image(sprite2, u.x, u.y, 50, 50);
+	    	image(esprite2, u.x, u.y, 50, 50);
 	  	}
 	  	if(u.flag==3) {
-	    	image(sprite3, u.x, u.y, 50, 50);
+	    	image(esprite3, u.x, u.y, 50, 50);
 	  	}
 	};
 
