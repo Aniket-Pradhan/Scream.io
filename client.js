@@ -109,13 +109,13 @@ function draw() {
 	for(var user in users){
 		var u = users[user];
 		//things.push(new Thing(u.x,u.y,u.flag));
-		if(u.flag==1) {
+		if(u.flag==1 && u.x!=xPos) {
 	    	image(esprite1, u.x, u.y, 50, 50);
 	  	}
-	  	if(u.flag==2) {
+	  	if(u.flag==2 && u.x!=xPos) {
 	    	image(esprite2, u.x, u.y, 50, 50);
 	  	}
-	  	if(u.flag==3) {
+	  	if(u.flag==3 && u.x!=xPos) {
 	    	image(esprite3, u.x, u.y, 50, 50);
 	  	}
 	};
