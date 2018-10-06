@@ -2,6 +2,7 @@ var Thing = function(x,y,flag){
     var sprite1 = loadImage('1.png');
     var sprite2 = loadImage('2.png');
     var sprite3 = loadImage('3.png');
+    this.gone = false;
     this.show = function(){
         if(flag==1) {
             image(sprite1, x, y, 50, 50);

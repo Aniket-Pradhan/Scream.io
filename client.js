@@ -96,7 +96,7 @@ function draw() {
 	};
 
 	//Add new item to the list where the mouse is...
-	things.push(new Thing(xPos,yPos,flag));
+	//things.push(new Thing(xPos,yPos,flag));
 
 	//Now...add all of the other user's mouse positions to the array (FUN!)
 	for(var user in users){
