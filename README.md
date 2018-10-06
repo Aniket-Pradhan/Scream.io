@@ -1,24 +1,25 @@
-# Multiplayer-P5.js-Example
+# Scream.io
 
-This is a short example of how one would implement multiplayer functionality into a p5.js sketch
+This is a short game where one has to race multiplayer enemies, by SCREAMING!! (FULL METAL)
 
 ## Setup
 
-```bash 
-
-# First, clone and enter the repo...
-$ git clone https://github.com/samdelong/Multiplayer-P5.js-Example.git
-$ cd Multiplayer-P5.js-Example
-
-# Then, start the server and navigate to http://localhost in your browser
-$ node server.js
-```
-Note: If you want to use this with people outside of your network, you will need to open ports 80 and 5941
+Just clone the repo, move into the directory, install the dependencies by:
+'''
+node install
+'''
+Now, simply run the server.
+'''
+node server.js (try sudo, if an error occurs)
+'''
+You can go to the localhost, and start shouting at your PC, to move the character. Ask your friends to join your server, to play in a multiplayer mode.
 
 ## Usage
 
-Just move your mouse around! (Requires a friend for full effect)
+Just scream. Nothing else.
 
-</p>
-<img width="200px" src="https://i.gyazo.com/397267e0599ed9085696e4d0e6e43499.gif" alt="https://gyazo.com/397267e0599ed9085696e4d0e6e43499" />
+## Dependencies
 
+1. Node
+2. A working mic
+3. Good metal scream
