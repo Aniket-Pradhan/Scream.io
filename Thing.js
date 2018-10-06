@@ -5,13 +5,19 @@ var Thing = function(x,y,flag){
     this.gone = false;
     this.show = function(){
         if(flag==1) {
-            image(sprite1, x, y, 50, 50);
+            //image(sprite1, x, y, 50, 50);
+            fill(255,255,255);
+            ellipse(x,y,20,20);
         }
         if(flag==2) {
-            image(sprite2, x, y, 50, 50);
+            //image(sprite2, x, y, 50, 50);
+            fill(255,255,255);
+            ellipse(x,y,20,20);
         }
         if(flag==3) {
-            image(sprite3, x, y, 50, 50);
+            //image(sprite3, x, y, 50, 50);
+            fill(255,255,255);
+            ellipse(x,y,20,20);
         }
     }
 }

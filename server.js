@@ -33,15 +33,17 @@ io.on("connection", (socket) => {
     users[socket.id] = {
         //set default x and y positions for user
         x: 0,
-        y: 0
+        y: 0,
+        flag: 0
     };
 
     socket.on('info', (info) => {
         //Check if client is sending correct information
-        if(info.y && info.x){
+        if(info.y && info.x && info.flag){
             //Set the specific user's mouse position
             users[socket.id].x = info.x;
             users[socket.id].y = info.y;
+            users[socket.id].flag = info.flag;
         }
     });
 
